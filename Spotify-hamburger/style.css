@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #2f303a;
+  font-family: Poppins, sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  min-height: 100vh;
+}
+
+.full-height-grow {
+ display: flex;
+ flex-direction: column;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.25em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-logo-name {
+  margin-left: 1rem;
+}
+
+.main-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav a {
+  color: inherit;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.discover{
+ padding: 1rem;
+ align-items: center;
+}
+
+.main-nav a:hover {
+  color: #adadad;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.title{
+ font-weight: 500;
+ font-size: 3em;
+ margin-bottom: 1rem;
+ margin-top: 0;
+}
+
+.subtitle{
+ font-weight: 100;
+ font-size: 1.2em;
+ margin-bottom: 2rem;
+}
+
+.btn{
+ color: white;
+ height: 7vh;
+ background: linear-gradient(180deg, rgba(30, 131, 224, 0.5) 0%, rgba(188, 58, 128, 0.5) 100%);
+ border-radius: .9rem;
+ padding: .75rem 1.5rem;
+ text-decoration: none;
+ font-size: .9rem;
+}
+.btn a{ 
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+.discover {
+ position: absolute;
+ left: 45%;
+ top: 10px; 
+}}
+@media screen and (max-width: 768px) {
+  .line {
+    width: 30px;
+    height: 5px;
+    background: linear-gradient(to right, #2f303a, #bc3a80);
+    margin: 5px;
+  }
+  nav {
+    position: relative;
+    left: -36%;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(350%, -60%);
+    z-index: 2;
+  }
+
+  .nav-links {
+    position: fixed;
+    background: #2f303a;
+    height: 10.6vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 0.6s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(10px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+    display: flex;
+    transform: translateY(30%);
+  }
+  .landing {
+    flex-direction: column;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .nav-links li a {
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+  nav a:hover {
+    color: #7d67a7;
+  }
+}
